@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "PoAn6JzD4dbdnzrTFoNQyoj6rjDyjJ/18/z5zaBF7QM=",
+  "Source": "Rently.Api",
+  "BasePath": "_content/Rently.Api",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Rently.Api\\wwwroot",
+      "Source": "Rently.Api",
+      "ContentRoot": "C:\\Users\\devap\\Desktop\\rentify360\\backend\\Rently.Api\\wwwroot\\",
+      "BasePath": "_content/Rently.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
