@@ -1,0 +1,79 @@
+# Visual Studio user-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio 2022 config
+.vs/
+
+# Rider / JetBrains IDEs
+.idea/
+*.sln.iml
+
+# Publish folder
+.publish/
+publish/
+*.PublishSettings
+*.pubxml
+*.pubxml.user
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+project.lock.json
+project.fragment.lock.json
+
+# Azure
+# (These contain secrets and connection strings)
+appsettings.json
+appsettings.*.json
+secrets.json
+local.settings.json
+
+# User-specific files
+*.swp
+*.bak
+*.log
+*.tmp
+
+# Environment files
+.env
+.env.* 
+
+# Node (if you have frontend build or React admin panel inside)
+node_modules/
+dist/
+build/
+
+# macOS / Windows system files
+.DS_Store
+Thumbs.db
+
+# Others
+*.dbmdl
+*.jfm
+*.db
+*.sqlite
+*.mdf
+*.ldf
+*.pdb
+*.tlog
+
+# Docker
+docker-compose.override.yml
