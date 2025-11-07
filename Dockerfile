@@ -2,21 +2,18 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copy project file and restore dependencies
-COPY ["rently-backend.csproj", "./"]
-RUN dotnet restore "rently-backend.csproj"
-
-# Copy everything else and build
+# Copy everything and restore dependencies
 COPY . .
-RUN dotnet publish "rently-backend.csproj" -c Release -o /app/publish
+RUN dotnet restore "Rently.Api.csproj"
+RUN dotnet publish "Rently.Api.csproj" -c Release -o /app/publish
 
 # Stage 2: Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/publish .
 
-# Bind to the Render-provided port
+# Render uses the PORT environment variable
 ENV ASPNETCORE_URLS=http://+:${PORT}
 EXPOSE 10000
 
-ENTRYPOINT ["dotnet", "rently-backend.dll"]
+ENTRYPOINT ["dotnet", "Rently.Api.dll"]
