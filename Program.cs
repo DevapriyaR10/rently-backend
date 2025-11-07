@@ -166,4 +166,6 @@ app.Logger.LogInformation("🚀 Rently API started successfully!");
 // -----------------------------
 // ▶️ Run the App
 // -----------------------------
-app.Run();
+var port = Environment.GetEnvironmentVariable("PORT") ?? "10000";
+app.Run($"http://0.0.0.0:{port}");
+
